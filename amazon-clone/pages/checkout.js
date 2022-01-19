@@ -15,9 +15,7 @@ export default function Checkout() {
     const items = useSelector(selectItems)
     const total = useSelector(selectTotal)
     const { data: session } = useSession()
-    console.log(session)
-
-    console.log(items)
+    
 
     const createSession = async ()=>{
         const stripe = await stripePromise
