@@ -49,26 +49,28 @@ const[hasPrime] = React.useState(
 
 
     return (
-        <Link href={'/product/' + id}>
-            <div  key={id} className='relative flex flex-col m-5 bg-white rounded-lg z-30 p-10 cursor-pointer hover:bg-teal-50'>
-                <p className='absolute top-2 right-2 text-xs italic text-gray-400'>{category}</p>
-                <Image src={image} height={200} width={200} objectFit="contain"  />
-                <h4 className='my-3'>{title}</h4>
-                <div className='flex'>
-                    {Array(rate).fill().map((_, i) =>(
-                        <StarIcon className='h-5 text-yellow-500'/>
-                    ))}
-                </div>
-                <p className='text-xs my-2 line-clamp-2'>{description}</p>
-                <p className='mb-5'>${price}</p>
-                {hasPrime &&
-                    <div className='flex items-center space-x-2'>
-                        <img className='w-12' src='https://links.papareact.com/fdw'/>
-                        <p className='text-xs text-gray-500'>FREE Next-day Delivery</p>
+        <div  key={id} className='relative flex flex-col m-5 bg-white rounded-lg z-30 p-10 cursor-pointer hover:bg-teal-50'>
+            <Link href={'/product/' + id}>
+                <div key={id}>
+                    <p className='absolute top-2 right-2 text-xs italic text-gray-400'>{category}</p>
+                    <Image src={image} height={200} width={200} objectFit="contain"  />
+                    <h4 className='my-3'>{title}</h4>
+                    <div className='flex'>
+                        {Array(rate).fill().map((_, i) =>(
+                            <StarIcon className='h-5 text-yellow-500'/>
+                        ))}
                     </div>
-                }
+                    <p className='text-xs my-2 line-clamp-2'>{description}</p>
+                    <p className='mb-5'>${price}</p>
+                    {hasPrime &&
+                        <div className='flex items-center space-x-2'>
+                            <img className='w-12' src='https://links.papareact.com/fdw'/>
+                            <p className='text-xs text-gray-500'>FREE Next-day Delivery</p>
+                        </div>
+                    }
+                </div>
+            </Link>
                 <button onClick={addItemToBasket} className='mt-auto button'>Add to busket</button>
             </div>
-        </Link>
     )
 }
