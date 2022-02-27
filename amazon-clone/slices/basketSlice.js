@@ -29,11 +29,16 @@ export const basketSlice = createSlice({
     }
 })
 
+function formatToCurrency(total){
+    return (total).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
+}
+
 export const {addToBasket, removeFromBasket} = basketSlice.actions
 
 export const selectItems = state => state.basket.items
 export const selectTotal = state => {
-    return state.basket.items.reduce((total, item) => total + item.price, 0)
+    let total = state.basket.items.reduce((total, item) => total + item.price, 0)
+    return formatToCurrency(total) 
 }
 
 export default basketSlice.reducer

@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import Header from '../../components/Header';
 import { addToBasket } from '../../slices/basketSlice';
 
+import banner3 from '../../public/banner3.jpg';
+
 
 
 export const getStaticPaths = async () =>{
@@ -52,7 +54,7 @@ export default function Product({product}) {
         rating
     }
 
-    console.log(product)
+    //console.log(product)
     //sending the product as an action to the redux store, meaning the basket slice
     dispatch(addToBasket(product))
  }
@@ -61,19 +63,23 @@ export default function Product({product}) {
 
 
     return (
-        <div className='relative top-28 bg-gray-100 h-screen w-screen flex flex-col items-center justify-center ' >
+        <div className='relative top-28 bg-gray-100  w-screen flex flex-col items-center justify-center gap-y-28 px-7 ' >
             <Header />
-            <div className='bg-white flex flex-col gap-y-10 items-center justify-center p-8 w-full mx-auto rounded-lg md:flex-row max-w-5xl'>
-                <div className='w-1/2 h-1/2 md:w-full px-5 grow-0'>
-                    <Image src={product.image} width={230} height={230} objectFit='contain'/>
+            <div className='bg-white flex flex-col gap-y-10 items-center justify-center p-8 w-full mx-auto rounded-lg md:flex-row max-w-5xl mt-20'>
+                <div className='w-1/2 h-1/2 px-5 md:w-[55rem]'>
+                    <Image src={product.image} width={250} height={250} objectFit='contain'/>
                 </div>
-                <div className='flex flex-col gap-y-4'>
+                <div className='flex flex-col gap-y-4 ml-5'>
                     <p className='bg-amazon_blue self-start text-white p-2 rounded-md bold'>{product.category}</p>
                     <h1 className='text-3xl'>{product.title}</h1>
                     <h2 className='text-2xl'>${product.price}</h2>
                     <p className=''>{product.description}</p>
                     <button onClick={addItemToBasket} className='mt-auto button self-start '>Add to busket</button>
                 </div>
+            </div>
+
+            <div className=''>
+                    <Image src={banner3} width={1000} height={260} objectFit='cover'/>
             </div>
 
         </div>

@@ -9,7 +9,7 @@ import { selectItems } from './../slices/basketSlice';
 
 export default function Header() {
 
-    const { data: session, loading } = useSession()
+    const { data: session } = useSession()
 
     const router = useRouter()
 

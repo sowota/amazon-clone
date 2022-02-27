@@ -8,7 +8,7 @@ export default function ProductFeed({products}) {
 
 
     return (
-        <div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-40 mx-auto' >
+        <div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-36 mx-auto -mt-12 sm:-mt-8 lg:-mt-64' >
             {products.slice(0, 4).map(product =>(
                 
             

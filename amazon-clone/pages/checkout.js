@@ -40,9 +40,9 @@ export default function Checkout() {
     }
 
     return (
-        <div className=" h-screen w-sc pt-28 lg:flex flex-col max-w-screen-2xl mx-auto">
+        <div className=" h-screen w-screen pt-28 lg:flex flex-col mx-auto">
             <Header/>
-            <div className='flex-grow m-5 shadow-sm mx-auto'>
+            <div className=' m-5 shadow-sm mx-auto'>
                     <Image 
                         src="https://links.papareact.com/ikj"
                         width={1020}
@@ -50,10 +50,10 @@ export default function Checkout() {
                         objectFit='contain'
                     />
             </div>
-            <main className="w-screen md:flex p-16 ">     
+            <main className="w-screen md:flex p-16 xl:px-80 mx-auto ">     
 
-                <div className='flex flex-col p-5 space-y-10 h-full flex-grow bg-white md:p-10'>
-                    <h1 className='text-3xl border-b pb-4'>Shopping Cart</h1>
+                <div className='flex flex-col p-5 space-y-10 h-full bg-white md:p-10 w-full'>
+                    <h1 className='text-3xl border-b pb-4 flex-grow '>Shopping Cart</h1>
                     {
                         items.length === 0 ? 
                         <h1 className='text-xl'>Your cart is empty</h1>
@@ -78,10 +78,10 @@ export default function Checkout() {
                     {/* sidebar */}   
                 {items.length > 0 && (
 
-                <div className='flex flex-col bg-white p-10 shadow-md'>
+                <div className='flex flex-col bg-white p-10 '>
                         <>
-                            <h2 className='whitespace-nowrap'>Subtotal ({items.length} items) {" "}
-                                <span>
+                            <h2 className='whitespace-nowrap mb-8'>Subtotal ({items.length} items) {" "}
+                                <span className='font-bold text-2xl'>
                                     ${total}
                                 </span>
                             
@@ -91,7 +91,7 @@ export default function Checkout() {
                                 role='link'
                                 onClick={createSession}
                                 disabled={!session}
-                                className={`button mt-s ${!session && 'from-gray-300 border-gray-200 text-gray-300 cursor-not-allowed'}`}
+                                className={`button mt-s ${!session && 'from-gray-300 border-gray-200 text-gray-600 cursor-not-allowed'}`}
                             >
                                 {!session? 'Sign in to checkout' : 'Proceed to checktout'}
                             </button>

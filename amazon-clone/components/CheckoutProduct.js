@@ -22,10 +22,12 @@ export default function CheckoutProduct({id, title, price, rating, description,i
 
    
     return (
-        <div className="grid grid-col-5 gap-y-4 ">
-            <Image src={image} width={200} height={200} objectFit='contain' />
+        <div className="flex flex-col lg:flex-row border-b pb-9 justify-center items-center gap-x-8">
+            <div className=" w-[15rem]">
+                <Image src={image} width={200} height={200} objectFit='contain' />
+            </div>
 
-            <div className='row-start-2 col-start-1 mx-5 lg:col-start-2 row-start-1'>
+            <div className='flex-1 flex flex-col gap-y-3'>
                 <p className='md:text-2xl'>{title}</p>
                 <div className='flex'>
                     {Array(rate).fill().map((_, i) =>(
@@ -49,10 +51,10 @@ export default function CheckoutProduct({id, title, price, rating, description,i
                     </div>
                 }
                
-            </div>
-            <div className='flex flex-col space-y-2 my-auto justify-self-center col-start-1 row-start-3 lg:col-start-2'>
+            <div className='flex flex-col space-y-2 my-auto justify-self-start col-start-1 row-start-3 lg:col-start-2'> 
                  {/* <button className='button'>Add to Basket</button> */}
-                 <button onClick={removeItem} className='button'>Remove from Basket</button>
+                 <button onClick={removeItem} className='button self-start '>Remove from Basket</button>
+            </div>
             </div>
         </div>
     )

@@ -49,9 +49,9 @@ const[hasPrime] = React.useState(
 
 
     return (
-        <div  key={id} className='relative flex flex-col m-5 bg-white rounded-lg z-30 p-10 cursor-pointer hover:bg-teal-50'>
+        <div  key={id} className='relative flex flex-col m-5 bg-white rounded-lg z-30 p-10 cursor-pointer hover:shadow-lg'>
             <Link href={'/product/' + id}>
-                <div key={id}>
+                <div key={id} className='flex flex-col'>
                     <p className='absolute top-2 right-2 text-xs italic text-gray-400'>{category}</p>
                     <Image src={image} height={200} width={200} objectFit="contain"  />
                     <h4 className='my-3'>{title}</h4>
