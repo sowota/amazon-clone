@@ -12,4 +12,13 @@
         hover:bg-yellow-400
         hover:shadow-md
     }
+
+    .footerHead{
+        @apply text-white font-semibold 
+
+    }
+
+    .footerLink{
+        @apply text-[#DDDDDD] text-sm leading-6 
+    }
 }

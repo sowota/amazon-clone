@@ -25,9 +25,7 @@ export default function Banner() {
                 <div>
                     <Image src={banner5} objectFit='cover'   />
                 </div>   
-                <div>
-                    <Image src='https://links.papareact.com/6ff' width='100%' height='100%'objectFit='cover'/>
-                </div>   
+             
                 <div>
                     <Image src={banner6} objectFit='cover'/>
                 </div>   

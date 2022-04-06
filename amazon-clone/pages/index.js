@@ -2,6 +2,7 @@
 import Header from './../components/Header';
 import Banner from './../components/Banner';
 import ProductFeed from './../components/ProductFeed';
+import Footer from './../components/Footer';
 
 
 export default function Home({products}) {
@@ -13,6 +14,7 @@ export default function Home({products}) {
        
           <ProductFeed products={products} />
       </main>
+      <Footer/>
     </div>
   )
 }

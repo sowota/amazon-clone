@@ -93,7 +93,7 @@ export default function Checkout() {
                                 disabled={!session}
                                 className={`button mt-s ${!session && 'from-gray-300 border-gray-200 text-gray-600 cursor-not-allowed'}`}
                             >
-                                {!session? 'Sign in to checkout' : 'Proceed to checktout'}
+                                {!session? 'Sign in to checkout' : 'Proceed to checkout'}
                             </button>
                         </>
                 </div>

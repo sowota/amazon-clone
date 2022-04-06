@@ -22,7 +22,10 @@ export default function CheckoutProduct({id, title, price, rating, description,i
 
    
     return (
-        <div className="flex flex-col lg:flex-row border-b pb-9 justify-center items-center gap-x-8">
+        <div 
+            key={id}
+            className="flex flex-col lg:flex-row border-b pb-9 justify-center items-center gap-x-8"
+        >
             <div className=" w-[15rem]">
                 <Image src={image} width={200} height={200} objectFit='contain' />
             </div>
